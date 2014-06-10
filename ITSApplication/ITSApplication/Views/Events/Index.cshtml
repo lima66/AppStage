@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Events";
+}
+
+<div class="row">
+    <div class="col-md-12">
+            <h2 class="pageTitle">Eventi</h2>
+            <div id="eventContainer">
+                @*eventi inseriti dinamicamente*@
+            </div>
+        </div>
+</div>
+
+<script src="~/Scripts/jquery-2.1.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        $.ajax({
+            url: 'http://localhost:18316/api/eventsApi',
+            type: 'GET',
+            datatype: "json",
+            success: function (data) {
+
+                for (var event_obj in data) {
+
+                    var event = new Object();
+                    event.data = data[event_obj].Data;
+                    event.titolo = data[event_obj].Titolo;
+                    event.testo = data[event_obj].Testo;
+                    event.foto = data[event_obj].Foto;
+
+                    var eventCell = '<div class="eventCell">'
+                                        + '<div class="row dataNews">'
+                                            + '<div class="col-md-12 divDateCell"><span class="dateNewsCell">' + news.data + '</span></div>'
+                                        + '</div>'
+                                        + '<div class="row titoloNews">'
+                                            + '<div class="col-md-12"><h4 class="newsTitle">' + news.titolo + '</h4></div>'
+                                        + '</div>'
+                                        + '<div class="row">'
+                                            + '<div class="col-md-2 divNewsImg">'
+                                            + '<img src="images/Renovating-Roof.jpg" />'
+                                        + '</div>'
+                                        + '<div class="col-md-10 divDescriptionNews">'
+                                            + '<p class="newsDescription">' + news.testo + '</p>'
+                                        + '</div>'
+                                  + '</div>';
+
+                    $('#eventContainer').append(eventCell);
+                }
+
+            }, error: function (data) {
+                $('#BottoneConferma').css('display', 'none');
+                $('#userItemsList').html("Errore nel recupero delle info utente");
+            }
+        });
+    });
+</script>
+

@@ -1,0 +1,9 @@
+C:\Users\stefano\Documents\Visual Studio 2013\Projects\ITSApplication\Data\bin\Debug\Data.dll
+C:\Users\stefano\Documents\Visual Studio 2013\Projects\ITSApplication\Data\bin\Debug\Data.pdb
+C:\Users\stefano\Documents\Visual Studio 2013\Projects\ITSApplication\Data\bin\Debug\MySql.Data.dll
+C:\Users\stefano\Documents\Visual Studio 2013\Projects\ITSApplication\Data\bin\Debug\MySql.Web.dll
+C:\Users\stefano\Documents\Visual Studio 2013\Projects\ITSApplication\Data\bin\Debug\ObjectsModel.dll
+C:\Users\stefano\Documents\Visual Studio 2013\Projects\ITSApplication\Data\bin\Debug\ObjectsModel.pdb
+C:\Users\stefano\Documents\Visual Studio 2013\Projects\ITSApplication\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+C:\Users\stefano\Documents\Visual Studio 2013\Projects\ITSApplication\Data\obj\Debug\Data.dll
+C:\Users\stefano\Documents\Visual Studio 2013\Projects\ITSApplication\Data\obj\Debug\Data.pdb

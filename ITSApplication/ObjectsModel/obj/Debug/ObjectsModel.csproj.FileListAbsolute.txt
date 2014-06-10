@@ -1,0 +1,4 @@
+C:\Users\stefano\Documents\Visual Studio 2013\Projects\ITSApplication\ObjectsModel\bin\Debug\ObjectsModel.dll
+C:\Users\stefano\Documents\Visual Studio 2013\Projects\ITSApplication\ObjectsModel\bin\Debug\ObjectsModel.pdb
+C:\Users\stefano\Documents\Visual Studio 2013\Projects\ITSApplication\ObjectsModel\obj\Debug\ObjectsModel.dll
+C:\Users\stefano\Documents\Visual Studio 2013\Projects\ITSApplication\ObjectsModel\obj\Debug\ObjectsModel.pdb

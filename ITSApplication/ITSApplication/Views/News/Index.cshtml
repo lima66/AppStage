@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "News";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="pageTitle">News</h2>
+        <div id="newsContainer">
+            @*news inserite dinamicamente*@
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-2.1.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        $.ajax({
+            url: 'http://localhost:18316/api/newsApi',
+            type: 'GET',
+            datatype: "json",
+            success: function (data) {
+
+                for (var news_obj in data) {
+
+                    var news = new Object();
+                    news.data = data[news_obj].Data;
+                    news.titolo = data[news_obj].Titolo;
+                    news.testo = data[news_obj].Testo;
+                    news.foto = data[news_obj].Foto;
+
+                    var newsCell = '<div class="newsCell">'
+                                        + '<div class="row dataNews">'
+                                            + '<div class="col-md-12 divDateCell"><span class="dateNewsCell">' + news.data + '</span></div>'
+                                        + '</div>'
+                                        + '<div class="row titoloNews">'
+                                            + '<div class="col-md-12"><h4 class="newsTitle">' + news.titolo + '</h4></div>'
+                                        + '</div>'
+                                        + '<div class="row">'
+                                            + '<div class="col-md-2 divNewsImg">'
+                                            + '<img src="images/Renovating-Roof.jpg" />'
+                                        + '</div>'
+                                        + '<div class="col-md-10 divDescriptionNews">'
+                                            + '<p class="newsDescription">' + news.testo + '</p>'
+                                        + '</div>'
+                                  + '</div>';
+
+                    $('#newsContainer').append(newsCell);
+                }
+
+            }, error: function (data) {
+                $('#BottoneConferma').css('display', 'none');
+                $('#userItemsList').html("Errore nel recupero delle info utente");
+            }
+        });
+    });
+</script>
